@@ -3,6 +3,7 @@
    "tree": {
       "$className": "DataModel",
       "ServerStorage": {
+         "$ignoreUnknownInstances": true,
          "$className": "ServerStorage",
          "SilverAdmin": {
             "$path": "src"
