@@ -10,9 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: ok-nick/setup-aftman@v0.3.0
+      - name: setup aftman
+        uses: ok-nick/setup-aftman@v0.3.0
+      
       - name: Publish package to wally
+        shell: cmd
+        env:
+         wally_auth: ${{ secrets.WALLY_AUTH }}
         run: |
-          aftman install
-          wally publish
+          wally publish --token "%wally_auth%"
