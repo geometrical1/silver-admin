@@ -14,8 +14,8 @@ jobs:
         uses: ok-nick/setup-aftman@v0.3.0
       
       - name: Publish package to wally
-        shell: cmd
+        shell: bash
         env:
          wally_auth: ${{ secrets.WALLY_AUTH }}
         run: |
-          wally publish --token "%wally_auth%"
+          wally publish --token "$wally_auth"
