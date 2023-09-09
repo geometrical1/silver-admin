@@ -15,4 +15,5 @@ jobs:
       - name: Publish package to wally
         run: |
           aftman install
+          wally login --token "$WALLY_AUTH"
           wally publish
