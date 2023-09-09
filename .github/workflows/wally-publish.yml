@@ -13,6 +13,11 @@ jobs:
       - name: setup aftman
         uses: ok-nick/setup-aftman@v0.3.0
       
+      - name: install dependancies
+        shell: cmd
+        run: |
+         aftman install
+      
       - name: Publish package to wally
         shell: cmd
         env:
