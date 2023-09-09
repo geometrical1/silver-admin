@@ -1,0 +1,12 @@
+{
+   "name": "silver-admin",
+   "tree": {
+      "$className": "DataModel",
+      "ServerStorage": {
+         "$className": "ServerStorage",
+         "SilverAdmin": {
+            "$path": "src"
+         }
+      }
+   }
+}
